@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.conatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.alert-text{
+    transform: scaleY(0);
+    position: fixed;
+   
+    width: 500px;
+    height: 150px;
+    
+    border: 1px solid #3697ab;
+    top: 15%;
+    left: 75%;
+    margin-top: -100px;  /* Negative half of height. */
+    margin-left: -250px;
+    text-align: center;
+}
+.alert-text1{
+    transform: scaleY(0);
+    position: fixed;
+   
+    width: 500px;
+    height: 150px;
+    
+    border: 1px solid #3697ab;
+    top: 15%;
+    left: 75%;
+    margin-top: -100px;  /* Negative half of height. */
+    margin-left: -250px;
+    text-align: center;
+}
+.alert-text2{
+    transform: scaleY(0);
+    position: fixed;
+   
+    width: 300px;
+    height: 150px;
+    
+    border: 1px solid #3697ab;
+    top: 15%;
+    left: 75%;
+    margin-top: -100px;  /* Negative half of height. */
+    margin-left: -250px;
+    text-align: center;
+}
+.alert-text-show{
+    transform: scaleY(1);
+}
+.alert-text-show1{
+    transform: scaleY(1);
+}
+.alert-text-show2{
+    transform: scaleY(1);
+}
+.title-top{
+    background-color: #3697ab;
+    color: #fff;
+    font-size: 22px;
+    padding: -60px;
+}
+.title-bottom{
+    font-size: 22px;
+}
+.login-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+}
+.login-header {
+    text-align: center;
+    margin: 15px 0 40px 0;
+}
+.login-header header img{
+    width: 340px;
+    margin-bottom: 10px;
+}
+.input-box .input-field {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    padding: 0 15px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    border: 1px solid #8f8a8a;
+    outline: none; 
+    transition: .3s;
+    color: #8f8a8a;
+}
+#input-box1 {
+    margin-bottom: 25px;
+}
+.forgot a {
+    color: #8f8a8a;
+    
+}
+.submit-btn {
+    width: 100%;
+    height: 40px;
+    background-color: #3697ab;
+    border: none;
+    border-radius: 5px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.submit-btn :hover {
+    background-color: #fff;
+    border: 2px solid #3697ab;
+    color: #3697ab;
+}
+.input-submit a button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+}
+ 

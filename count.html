@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    
+    <link rel="stylesheet" href="analyse.css">
+</head>
+<body>
+    <div class="conteneur1">
+         <!--barre de navigation -->
+         <div class="barnav" style=" width: 20%; height: 100vh;">
+            
+            <nav>
+                <div>
+                    <img src="img/side-logo-removebg-preview.png" alt="">
+                    <ul>
+                         <li>
+                            <a href="dashboard.html">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span>Dashboard</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="facture.html">
+                                <i class="fa-solid fa-peace"></i>
+                                <span>Facture</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="commande.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Commande</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="suiv.html">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Suivi</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a class="active"  href="servcli.html">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>Service client</span>
+                            </a>
+                         </li>
+                         <div class="logout">
+                            <li>
+                                <a href="count.html" >
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>Paramètre du compte</span>
+                                </a>
+                             </li>
+                             <li>
+                                <a href="http://127.0.0.1:5502/login.html">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    <span>Déconnexion</span>
+                                </a>
+                             </li>
+                         </div>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+         <!--l'entête -->
+
+        <div class="entete">
+
+            <div class="nav-bar">
+                <div class="bell">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                 <img src="img/boostrap.png" alt="" class="img-boostrap">
+            </div>
+
+       
+
+        <section class="bill-count">
+            <div class="count">
+               <div class="head">
+                <h1>Parametre du compte</h1>
+                <a href="#">Retour au tableau de bord</a>
+                
+               
+               </div>
+
+               <div class="buttons">
+                <button class="btn-update">Modifier le mot de passe</button> <br><br>
+                <button class="btn-delete">Supprimer le compte</button>
+
+               </div>
+            </div>
+            <div class="input-box">
+                <div>
+                    <p>Modifier le profil</p>
+                    <form action="">
+                       <label for="Name">
+                            <input type="text" name="Name" id="input-name" placeholder="Essai test">
+                       </label>
+                       <label for="Email">
+                        <input type="email" name="Email" id="input-email" placeholder="masubacoder@gmail">
+                       </label>
+                    </form>
+                </div>
+                <div class="avatar">
+                    <p>Ton Avatar</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

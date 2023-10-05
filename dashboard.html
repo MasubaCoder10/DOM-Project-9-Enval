@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="analyse.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="conteneur1">
+
+        <!--barre de navigation -->
+
+        <div class="barnav">
+            
+            <nav>
+                <div>
+                    <img src="img/side-logo-removebg-preview.png" alt="">
+                    <ul>
+                         <li>
+                            <a class="active" href="dashboard.html">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span>Dashboard</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="facture.html">
+                                <i class="fa-solid fa-peace"></i>
+                                <span>Facture</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="commande.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Commande</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="suiv.html">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Suivi</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="servcli.html">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>Service client</span>
+                            </a>
+                         </li>
+                         <div class="logout">
+                            <li>
+                                <a href="" >
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>Paramètre du compte</span>
+                                </a>
+                             </li>
+                             <li>
+                                <a href="login.html">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    <span>Déconnexion</span>
+                                </a>
+                             </li>
+                         </div>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="conteneur2">
+
+            <!--l'entête -->
+
+            <div class="entete">
+
+                <div class="nav-bar">
+                    <div class="bell">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                     <img src="img/boostrap.png" alt="" class="img-boostrap">
+                </div>
+
+            </div>
+            <div class="conteneur3">
+
+                <!-- contenu de body -->
+
+                <!--les cartes-->
+
+                <section class="dash">
+     
+                    <div class="graphe">
+                      <div>
+                        <h2>Analyses positives</h2>
+                        <div class="positif">
+                        
+                          <div style="text-align: center; margin-top: 1rem;">
+                                  <span style="text-align: center;">
+                                      <i style="color: white; font-size: 30px;" class="fa-solid fa-bolt"></i>
+                                  </span>
+                                <h1 style="color: white; padding: 20px;">Positif</h1>
+                            </div>
+                
+                
+                          <div  style="width:180px; height: 180px; margin-left: 12% ;">
+                              <canvas id="myChart"></canvas>
+                            </div>
+                            
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                            
+                            <script>
+                              const ctx = document.getElementById('myChart');
+                            
+                              new Chart(ctx, {
+                                type: 'doughnut',
+                                data: {
+                                  labels: [],
+                                  datasets: [{
+                                    label: '# of Votes',
+                                    data: [80, 10],
+                                    borderWidth: 1,
+                                    backgroundColor:['white', ' #1898A8']
+                                  }]
+                                },
+                            
+                                options: {
+                                    circumference: 300,
+                                    rotation: 210,
+                                    cutout:'80%',
+                                  aspectRation: 2,
+                                }
+                              });
+                            </script>
+                
+                          <span class="pourcentage1">91%</span>
+                
+                      </div>
+                      </div>
+                
+                
+                  <div>
+                    <h2>Analyses negatives</h2>
+                  <div class="negatif">
+                      <div style="text-align: center; margin-top: 1rem;">
+                          <span style="text-align: center;">
+                              <i style="color: #1898A8; font-size: 30px;" class="fa-solid fa-droplet"></i>
+                          </span>
+                        <h1 style="color: black; padding: 10px;">Negatif</h1>
+                    </div>
+                
+                
+                  
+                  <div style="width:180px; height: 180px; margin-left: 12% ;">
+                      <canvas id="myChart1"></canvas>
+                    </div>
+                    
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    
+                    <script>
+                      const ytx = document.getElementById('myChart1');
+                    
+                      new Chart(ytx, {
+                        type: 'doughnut',
+                        data: {
+                          labels: [],
+                          datasets: [{
+                            label: '# of Votes',
+                            data: [10, 80],
+                            borderWidth: 1,
+                            backgroundColor:[' #1898A8', '#EBEBEB']
+                          }]
+                        },
+                    
+                        options: {
+                            circumference: 300,
+                            rotation: 210,
+                            cutout:'80%',
+                          aspectRation: 2,
+                        }
+                      });
+                    </script>
+                      <span class="pourcentage2">9%</span>
+                      
+                  </div>
+                </div>
+                
+                  
+                
+                </div>
+                </section>
+                
+
+                <!--le graphe -->
+
+                <section class="graph">
+                    <div>
+                      <h2 style="text-align: start;">Analyses par mois</h2>
+                    <div class="graphe-content">
+                      <div>
+                          <canvas id="myChart2" style="width:1000px; height: 350px;"></canvas>
+                        </div>
+                  
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script src="./chart.umd.min.js"></script>
+                  
+                        <script>
+                          const grp = document.getElementById("myChart2");
+                  
+                          new Chart(grp, {
+                            type: "bar",
+                            data: {
+                              labels: [
+                                "JAN",
+                                "FEV",
+                                "MARS",
+                                "AVRIL",
+                                "MAI",
+                                "JUIN",
+                                "JUL",
+                                "AOUT",
+                                "SEP",
+                                "OCT",
+                                "NOV",
+                                "DEC",
+                              ],
+                              datasets: [
+                                {
+                                  label: "",
+                                  data: [6, 4, 7, 3, 6, 2, 5, 6, 6, 6, 6, 6],
+                                  borderWidth: 0,
+                                  backgroundColor: "white",
+                                  hoverBackgroundColor: "#4A96A6",
+                                  // barThickness: 40,
+                  
+                                },
+                              ],
+                            },
+                            options: {
+                              maintainAspectRatio: false,
+                              plugins: {
+                                legend: {
+                                  display: false,
+                                },
+                              },
+                  
+                              scales: {
+                                y: {
+                                  beginAtZero: true,
+                                  display: false,
+                                },
+                  
+                                x: {
+                                  grid: {
+                                    color: "white",
+                                  },
+                                },
+                              },
+                            },
+                          });
+                        </script>
+                  </div>
+                  </div>
+                  </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

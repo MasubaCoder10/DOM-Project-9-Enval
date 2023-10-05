@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="analyse.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <title>Service-Client</title>
+</head>
+
+<body>
+
+    <div class="conteneur1" style="width:100%; height:100%; display: flex;">
+
+        <!--barre de navigation -->
+
+        <div class="barnav" style=" width: 20%; height: 100vh;">
+            
+            <nav>
+                <div>
+                    <img src="img/side-logo-removebg-preview.png" alt="">
+                    <ul>
+                         <li>
+                            <a href="dashboard.html">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                <span>Dashboard</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="facture.html">
+                                <i class="fa-solid fa-peace"></i>
+                                <span>Facture</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="commande.html">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>Commande</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a href="suiv.html">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                <span>Suivi</span>
+                            </a>
+                         </li>
+                         <li>
+                            <a class="active"  href="servcli.html">
+                                <i class="fa-solid fa-comment-dots"></i>
+                                <span>Service client</span>
+                            </a>
+                         </li>
+                         <div class="logout">
+                            <li>
+                                <a href="count.html" >
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span>Paramètre du compte</span>
+                                </a>
+                             </li>
+                             <li>
+                                <a href="http://127.0.0.1:5502/login.html">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    <span>Déconnexion</span>
+                                </a>
+                             </li>
+                         </div>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="conteneur2" style=" width:80%; background-color: #c0e2ea; height: 100vh; display: flex; flex-direction: column; align-items: center;">
+
+            <!--l'entête -->
+
+            <div class="enete" style="background-color: white; margin-left: 1%; width: 99%; height: 80px;">
+
+                <div class="nav-bar">
+                    <div class="bell">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                     <img src="img/boostrap.png" alt="" class="img-avator">
+                </div>
+
+            </div>
+            <div class="contenur3" style=" width:100%; height: 100vh; ">
+
+                <!-- contenu de body -->
+
+                <!--service client -->
+
+                <section class="service">
+                    <label class="sj" for="">Sujet</label>
+                    <div style="margin-bottom: 1%;">
+                       <input class="sujet" type="text" name="" id="">
+                    </div>
+                    <label class="label2" for="">Messages</label>
+                    <div>
+                        <textarea class="textarea" name="" id=""></textarea>
+                    </div>
+                    <input class="envoie" type="button" value="Envoyer">
+                </body>
+                </html>
+            
+            </section>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

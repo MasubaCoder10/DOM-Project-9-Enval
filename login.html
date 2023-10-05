@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Page</title>
+  </head>
+  <body>
+    <table class="alert-text">
+      <tr>
+        <td class="title-top">Connecxion</td>
+      </tr>
+      <tr>
+        <td class="title-bottom">oops!! la combinaison n'est pas correct</td>
+      </tr>
+
+    </table>
+    <table class="alert-text1">
+      <tr>
+        <td class="title-top">Compte bloqué</td>
+      </tr>
+      <tr>
+        <td class="title-bottom">oops!! otre compte est temporairement bloqué</td>
+      </tr>
+    </table>
+    <table class="alert-text2">
+      <tr>
+        <td class="title-top">Timer deblockage</td>
+      </tr>
+      <tr>
+        <td class="title-bottom"><h1 id="timer">00:00:00</h1></td>
+      </tr>
+    </table>
+    
+    <div class="conatiner">
+     
+      <div class="login-box">
+        <div class="login-header">
+          <header><img src="img/img_login-removebg-preview.png" alt="" /></header>
+        </div>
+        <div class="input-box" id="input-box1">
+          <input
+          id="input-text"
+            type="text"
+            class="input-field"
+            placeholder="Email"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+          id="input-password"
+            type="password"
+            class="input-field"
+            placeholder="Password"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="forgot">
+          <section>
+            <a href="#">Forgot your password?</a>
+          </section>
+        </div>
+        <div class="input-submit">
+          <a  onclick="login()"
+            ><button class="submit-btn" >Connexion</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
