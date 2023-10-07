@@ -483,30 +483,130 @@ nav {
 }
 .btn-update{
   background-color: #1698a8;
-  height: 2rem;
+  height: 3rem;
   border: none;
   border-radius: 0.3rem;
   padding: 0 1rem;
   color: #fff;
   font-size: 18px;
-  margin-right: 10rem;
+  margin-right: 4rem;
+}
+.btn-update:hover{
+  background-color: #fff;
+  border: 2px solid #1698a8;
+  border-radius: 0.3rem;
+  color: #1698a8;
 }
 .btn-delete{
   background-color: red;
-  height: 2rem;
+  height: 3rem;
   border: none;
   border-radius: 0.3rem;
   padding: 0 1rem;
   color: #fff;
   font-size: 18px;
 }
-
-
-
-
-
-
-
+.btn-delete:hover{
+  background-color: #fff;
+  border: 2px solid red;
+  border-radius: 0.3rem;
+  color: red;
+}
+.input-box{
+  display: flex;
+  justify-content: space-between;
+}
+.avatar{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  margin: 4rem 10rem;
+}
+.img{
+  width: 400px;
+}
+label.btn-updateAvatar{
+  text-align: center;
+  display: block;
+  justify-items: center;
+  background-color: #1698a8;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  padding-top: 0.8rem;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  
+}
+.btn-updateAvatar:hover{
+  background-color: #fff;
+  border: 2px solid #1698a8;
+  border-radius: 0.3rem;
+  color: #1698a8;
+}
+.btn-deleteAvatar{
+  background-color: red;
+  height: 3rem;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn-deleteAvatar:hover{
+  background-color: #fff;
+  border: 2px solid red;
+  border-radius: 0.3rem;
+  color: red;
+}
+P{
+  font-size: 22px;
+}
+.inputs{
+  height: 40rem;
+  width: 100%;
+ 
+  margin-left: 2rem;
+ 
+}
+.inputs1{
+  height: 3rem;
+  width: 100%;
+  font-size: 18px;
+}
+label{
+  font-size: 22px;
+}
+input#input-file{
+  display: none;
+}
+.btn-sends{
+  margin: auto;
+  text-align: center;
+}
+.btn-send{
+  background-color: #1698a8;
+  height: 3rem;
+  width: 80%;
+  margin: auto;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0 1rem;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 4rem;
+}
+.btn-send:hover{
+  background-color: #fff;
+  border: 2px solid #1698a8;
+  border-radius: 0.3rem;
+  color: #1698a8;
+}
 /*################# les media sur dash ######################*/
 
 @media screen and (max-width: 375px) {

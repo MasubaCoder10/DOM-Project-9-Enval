@@ -3,9 +3,23 @@ import { arraySuivi } from "./datas.js";
 
 //variable
 const tbodySuivi = document.querySelector("#tbodySuivi"),
-searchSuivi = document.querySelector("#searchSuivi")
+searchSuivi = document.querySelector("#searchSuivi"),
+navarImg = document.querySelector("#navar-img");
 
 
+
+
+function showPicture(){
+  document.addEventListener("DOMContentLoaded", ()=>{
+      let typeImg = JSON.parse(localStorage.getItem("typeImg"));
+      if(typeImg){
+          navarImg.setAttribute("src", typeImg)
+          photo.setAttribute("src", typeImg)
+      }
+      
+   })
+}
+showPicture()
 function addSuivi(arraySuivi) {
   tbodySuivi.innerHTML = "";
   arraySuivi.forEach((suivi, index) => {

@@ -12,10 +12,21 @@ const inputText = document.querySelector("#input-text"),
   timer = document.querySelector("#timer"),
   tbody = document.querySelector("#tbody-facture"),
   headers = document.querySelectorAll("#header"),
-  search = document.querySelector("#search")
+  search = document.querySelector("#search"),
+  navarImg = document.querySelector("#navar-img");
 
 
-
+  function showPicture(){
+    document.addEventListener("DOMContentLoaded", ()=>{
+        let typeImg = JSON.parse(localStorage.getItem("typeImg"));
+        if(typeImg){
+            navarImg.setAttribute("src", typeImg)
+            photo.setAttribute("src", typeImg)
+        }
+        
+     })
+}
+showPicture()
 
 let index = 0;
 let second = 5 * 60;

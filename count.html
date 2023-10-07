@@ -79,7 +79,7 @@
                 <div class="bell">
                     <i class="fa-solid fa-bell"></i>
                 </div>
-                 <img src="img/boostrap.png" alt="" class="img-boostrap">
+                 <img src="img/avatar.jpg" alt="" class="img-boostrap" id="navar-img">
             </div>
 
        
@@ -100,23 +100,45 @@
                </div>
             </div>
             <div class="input-box">
-                <div>
+                <div class="inputs">
                     <p>Modifier le profil</p>
                     <form action="">
-                       <label for="Name">
-                            <input type="text" name="Name" id="input-name" placeholder="Essai test">
+                       <label for="Name"><br><br>Name <br>
+                            <input type="text" name="Name" id="input-name input" placeholder="Essai test" class="inputs1">
                        </label>
-                       <label for="Email">
-                        <input type="email" name="Email" id="input-email" placeholder="masubacoder@gmail">
-                       </label>
+                       
                     </form>
+                    <form action="">
+                        <label for="Email"><br><br> Email <br>
+                            <input type="email" name="Email" id="input-email input" placeholder="masubacoder@gmail" class="inputs1">
+                           </label>
+                    </form>
+                    <form action="">
+                        <label for="Biographie"><br><br>Biographie <br>
+                            <input type="email input" name="Biographie" id="input-email" placeholder="je suis masubacoder" class="inputs1"> 
+                           </label>
+                    </form>
+                    <div class="btn-sends">
+                        <button class="btn-send">Envoyer</button>
+                    </div>
                 </div>
                 <div class="avatar">
                     <p>Ton Avatar</p>
+                    <div class="profil-pic-div">
+                        <img src="img/avatar.jpg" alt="" class="img" id="photo">
+                        <input type="file" accept="image/*" id="input-file" >
+                        <label for="input-file" class="btn-updateAvatar">Modifier le profil</label>
+                        
+                    </div>
+                    
+                    <button class="btn-deleteAvatar" id="btn-delete">Supprimer le compte</button>
                 </div>
             </div>
         </section>
     </div>
 </div>
+
+
+    <script src="counApp.js"></script>
 </body>
 </html>
