@@ -1,51 +1,28 @@
-export const arrayFacture = [
-{
-    id: "00001",
-    name: "Enval",
-    date: "10/03/2023",
-},
-{
-    id: "00002",
-    name: "Biochimie",
-    date: "11/03/2023",
-},
-{
-    id: "00003",
-    name: "Biologie",
-    date: "12/03/2023",
-},
-{
-    id: "00004",
-    name: "Biologie",
-    date: "12/03/2023",
-},
-{
-    id: "00005",
-    name: "Enval",
-    date: "12/03/2023",
-},
-{
-    id: "00006",
-    name: "Biochimie",
-    date: "12/03/2023",
-},
-{
-    id: "00007",
-    name: "Enval",
-    date: "13/03/2023",
-},
-{
-    id: "00008",
-    name: "Geologie",
-    date: "13/03/2023",
-},
-{
-    id: "00009",
-    name: "Enval",
-    date: "13/03/2023",
-}
 
-]
+let arrayLogin = [
+    {
+      id: 1,
+      userName: "Masuba",
+      passWord: "123456",
+    },
+    {
+      id: 2,
+      userName: "MasubaCoder",
+      passWord: "111111",
+    },
+    {
+      id: 3,
+      userName: "admin",
+      passWord: "000000",
+    },
+  ];
+  const getUsers = JSON.parse(localStorage.getItem("arrayLogin"))
+  if(!getUsers){
+    localStorage.setItem("arrayLogin", JSON.stringify(arrayLogin));
+  };
+  
+
+ 
 
 export const arrayCommande = [
     {

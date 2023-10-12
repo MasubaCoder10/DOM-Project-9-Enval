@@ -9,10 +9,12 @@
      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
      crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
-    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
     <link rel="stylesheet" href="analyse.css">
 </head>
 <body>
+   
     <div class="conteneur1">
          <!--barre de navigation -->
          <div class="barnav" style=" width: 20%; height: 100vh;">
@@ -87,15 +89,72 @@
         <section class="bill-count">
             <div class="count">
                <div class="head">
-                <h1>Parametre du compte</h1>
-                <a href="#">Retour au tableau de bord</a>
+
+                <table class="alert-text">
+                    <tr>
+                      <td class="title-top">Données Personnelle</td>
+                    </tr>
+                    <tr>
+                      <td class="title-bottom">Mise à jour c'est effectué avec success</td>
+                    </tr>
+              
+                  </table>
+
+                  <table class="alert-text1">
+                    <tr>
+                      <td class="title-top">Suppresion de l'avatar</td>
+                    </tr>
+                    <tr>
+                      <td class="title-bottom">Votre photo à été Supprimer avec success</td>
+                    </tr>
+              
+                  </table>
+                  <table class="alert-text2">
+                    <tr>
+                      <td class="title-top">Modification de l'avatar</td>
+                    </tr>
+                    <tr>
+                      <td class="title-bottom">Votre photo à été Modifier avec success</td>
+                    </tr>
+              
+                  </table>
+
+
+                  <table class="alert-text3" >
+                    <tr >
+                      <td class="title-top" style="font-size: 25px; text-align: center; padding: 1.1rem; margin-bottom: 1rem;">Update password</td>
+                    </tr>
+                    <tr style="height: 6rem;">
+                      <td class="title-bottom" style="padding: 0rem 1rem; "><label for="" style="font-size: 20px; margin-top: 1rem;"> ancien password <br>
+                        <input type="password" id="old-password" class="inputUpdate" placeholder="ancien password" style="width: 100%; padding: 0.6rem 0.3rem; font-size: 16px; border-radius: 0.5rem;">
+                      </label></td>
+                    </tr>
+                    <tr style="height: 6rem;">
+                        <td class="title-bottom"  style="padding: 0rem 1rem;"><label for="" style="font-size: 20px; ">nouveau password <br>
+                          <input type="password" id="new-password" class="inputUpdate" placeholder="nouveau password" style="width: 100%; padding: 0.6rem 0.3rem; font-size: 16px; border-radius: 0.5rem;">
+                        </label></td>
+                      </tr>
+                      <tr style="height: 6rem;">
+                        <td class="title-bottom"  style="padding: 0rem 1rem; "><label for="" style="font-size: 20px; ">confirmation <br>
+                          <input type="password" id="confirmation-password" class="inputUpdate" placeholder="confirmé password" style="width: 100%; padding: 0.6rem 0.3rem; font-size: 16px; margin-bottom: 3rem; border-radius: 0.5rem;">
+                        </label></td><br>
+                      </tr>
+                      <tr style="height: 6rem;">
+                        <td class="title-bottom"  style="padding: 0rem 1rem; display: flex; justify-content: center; align-items: center;">
+                          <button type="password" class="inputUpdate" id="btnSend" placeholder="confirmé password" style="width: 70%; padding: 0.6rem 0.3rem;  font-size: 22px; margin-bottom: 3rem; border-radius: 0.5rem; background-color: #3697ab; border: none; color: #fff; cursor: pointer;"> Send </button>
+                        </td>
+                      </tr>
+                  </table>
+
+                <h1>Parametre du compte</h1> <br>
+                <a href="dashboard.html" id="linKCount"><i class="fi fi-sr-arrow-left" id="linKCount"></i> Retour au tableau de bord</a>
                 
                
                </div>
 
                <div class="buttons">
-                <button class="btn-update">Modifier le mot de passe</button> <br><br>
-                <button class="btn-delete">Supprimer le compte</button>
+                <button class="btn-update" id="btn-updateProfil" onclick="showLogin()">Modifier le mot de passe</button> <br><br>
+                <button class="btn-delete" id="btn-deleteProfil">Supprimer le compte</button>
 
                </div>
             </div>
@@ -104,22 +163,22 @@
                     <p>Modifier le profil</p>
                     <form action="">
                        <label for="Name"><br><br>Name <br>
-                            <input type="text" name="Name" id="input-name input" placeholder="Essai test" class="inputs1">
+                            <input type="text" name="Name" id="input-name" placeholder="Essai test" class="inputs1">
                        </label>
                        
                     </form>
                     <form action="">
                         <label for="Email"><br><br> Email <br>
-                            <input type="email" name="Email" id="input-email input" placeholder="masubacoder@gmail" class="inputs1">
+                            <input type="email" name="Email" id="input-email" placeholder="masubacoder@gmail" class="inputs1">
                            </label>
                     </form>
                     <form action="">
                         <label for="Biographie"><br><br>Biographie <br>
-                            <input type="email input" name="Biographie" id="input-email" placeholder="je suis masubacoder" class="inputs1"> 
+                            <textarea type="email " name="Biographie" id="myTextArea" placeholder="je suis masubacoder" class="inputs1"></textarea> 
                            </label>
                     </form>
                     <div class="btn-sends">
-                        <button class="btn-send">Envoyer</button>
+                        <button class="btn-send" onclick="apply()">Envoyer</button>
                     </div>
                 </div>
                 <div class="avatar">
@@ -127,7 +186,7 @@
                     <div class="profil-pic-div">
                         <img src="img/avatar.jpg" alt="" class="img" id="photo">
                         <input type="file" accept="image/*" id="input-file" >
-                        <label for="input-file" class="btn-updateAvatar">Modifier le profil</label>
+                        <label for="input-file" class="btn-updateAvatar" onclick="">Modifier le profil</label>
                         
                     </div>
                     
@@ -138,7 +197,16 @@
     </div>
 </div>
 
-
-    <script src="counApp.js"></script>
+<script>
+   tinymce.init({
+    selector: "#myTextArea",
+    plugins: "lists link image",
+    toolbar: "undo redo | bold italic | bullist numlist | link",
+   
+   });
+</script>
+    <script src="counApp.js">
+     
+    </script>
 </body>
 </html>

@@ -15,7 +15,6 @@ const tbodyCommande = document.querySelector("#tbody-command"),
         let typeImg = JSON.parse(localStorage.getItem("typeImg"));
         if(typeImg){
             navarImg.setAttribute("src", typeImg)
-            photo.setAttribute("src", typeImg)
         }
         
      })
