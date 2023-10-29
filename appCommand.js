@@ -1,5 +1,61 @@
 //import
-import { arrayCommande } from "./datas.js";
+const arrayCommande = [
+  {
+      id:"00001",
+      name:"Enval",
+      date:"10/03/2023",
+      status: "En cours"
+  },
+  {
+      id:"00002",
+      name:"Codeloccol",
+      date:"10/03/2023",
+      status: "En cours"
+  },
+  {
+      id:"00003",
+      name:"ANSI",
+      date:"12/03/2023",
+      status: "Terminer"
+  },
+  {
+      id:"00004",
+      name:"CIPMEN",
+      date:"12/03/2023",
+      status: "En cours"
+  },
+  {
+      id:"00005",
+      name:"ADU",
+      date:"13/03/2023",
+      status: "Terminer"
+  },
+  {
+      id:"00006",
+      name:"Codeloccol",
+      date:"14/03/2023",
+      status: "En cours"
+  },
+  {
+      id:"00007",
+      name:"Enval",
+      date:"14/03/2023",
+      status: "En cours"
+  },
+  {
+      id:"00008",
+      name:"ANSI",
+      date:"16/03/2023",
+      status: "En cours"
+  },
+  {
+      id:"00009",
+      name:"ADU",
+      date:"16/03/2023",
+      status: "Terminer"
+  },
+  
+];
 
 // variable
 
@@ -26,11 +82,11 @@ function addCommand(arrayCommande) {
   arrayCommande.forEach((command) => {
     tbodyCommande.innerHTML += `
                           <tr id="rows">
-                            <td class="table" style="text-align: start; padding-left: 40px;">${command.id}</td>
-                            <td class="table">${command.name}</td>
-                            <td class="table">${command.date}</td>
-                            <td class="table" style="color: red; border-color: black;" >${command.status}</td>
-                            <td class="voir"> <button class="button">voir</button> </td>
+                            <td class="table td soso" style="text-align: start; padding-left: 40px;">${command.id}</td>
+                            <td class="table td">${command.name}</td>
+                            <td class="table td">${command.date}</td>
+                            <td class="table td" style="color: red; border-color: black;" >${command.status}</td>
+                            <td class="voir td"> <button class="button">voir</button> </td>
                                                     
                           </tr>
           `;

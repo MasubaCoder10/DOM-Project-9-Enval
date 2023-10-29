@@ -12,7 +12,7 @@ nav {
   /* position: fixed; */
   top: 0;
   bottom: 0;
-  height: auto;
+  height: 100vh;
   left: 0;
   background-color: #fff;
   /* width: 15%; */

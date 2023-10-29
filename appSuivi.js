@@ -1,5 +1,66 @@
 //import
-import { arraySuivi } from "./datas.js";
+const arraySuivi = [
+  {
+      lot: "1E202023001",
+      etat: "Reçu",
+      date: "12/03/2023",
+      rapport: "Disponible"
+  },
+  {
+      lot: "E2202023023",
+      etat: "NON Reçu",
+      date: "12/03/2023",
+      rapport: "NON Disponible"
+  },
+  {
+      lot: "TE202023090",
+      etat: "Reçu",
+      date: "14/03/2023",
+      rapport: "NON Disponible"
+  },
+  {
+      lot: "carbonate",
+      etat: "Reçu",
+      date: "14/03/2023",
+      rapport: "Disponible"
+  },
+  {
+      lot: "Checurire",
+      etat: "NON Reçu",
+      date: "16/03/2023",
+      rapport: "NON Disponible"
+  },
+  {
+      lot: "CO2 libre",
+      etat: "Reçu",
+      date: "16/03/2023",
+      rapport: "Disponible"
+  },
+  {
+      lot: "Conductivite elctricite",
+      etat: "NON Reçu",
+      date: "16/03/2023",
+      rapport: "NON Disponible"
+  },
+  {
+      lot: "PH/temperature",
+      etat: "Reçu",
+      date: "16/03/2023",
+      rapport: "Disponible"
+  },
+  {
+      lot: "Couleur Brute",
+      etat: "Reçu",
+      date: "18/03/2023",
+      rapport: "NON Disponible"
+  },
+  {
+      lot: "Cenuire libre",
+      etat: "Reçu",
+      date: "20/03/2023",
+      rapport: "Disponible"
+  },
+]
 
 //variable
 const tbodySuivi = document.querySelector("#tbodySuivi"),
@@ -25,11 +86,11 @@ function addSuivi(arraySuivi) {
   arraySuivi.forEach((suivi, index) => {
     tbodySuivi.innerHTML += `
         <tr id="rows">
-            <td id="nameLot" class="table" style=" text-align: start; padding-left: 40px;">${suivi.lot}</td>
-            <td class="table">${suivi.etat}</td>
-            <td class="table">${suivi.date}</td>
-            <td id= "rapport" class="table">${suivi.rapport}</td>
-            <td class="voir" id="buttons" data-id="${index}"><input class="button" type="button" value="voir" ></td>
+            <td id="nameLot" class="table td soso" style=" text-align: start; padding-left: 40px;">${suivi.lot}</td>
+            <td class="table td">${suivi.etat}</td>
+            <td class="table td">${suivi.date}</td>
+            <td id= "rapport" class="table td">${suivi.rapport}</td>
+            <td class="voir td" id="buttons" data-id="${index}"><input class="button" type="button" value="voir" ></td>
             
         </tr>
     `;

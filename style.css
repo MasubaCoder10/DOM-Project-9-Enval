@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #fff;
 }
 
@@ -78,7 +78,7 @@
     flex-direction: column;
     width: 440px;
     height: 480px;
-    padding: 30px;
+   
 }
 .login-header {
     text-align: center;
@@ -128,3 +128,55 @@
     font-size: 18px;
 }
  
+@media screen and (max-width: 500px){
+    .login-box {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 280px;
+        height: 380px;
+       
+    }
+    .login-header {
+        text-align: center;
+        margin: 15px 0 40px 0;
+    }
+    .login-header header img{
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    .submit-btn {
+        width: 100%;
+        height: 40px;
+        background-color: #3697ab;
+        border: none;
+        border-radius: 5px;
+        margin-top: 50px;
+        margin-bottom: 60px;
+        cursor: pointer;
+    }
+    .alert-text{
+        top: 15%;
+        left: 55%;
+        margin-top: -50px;  /* Negative half of height. */
+        margin-left: -150px;
+        width: 260px;
+        height: 100px;
+    }
+    .alert-text1{
+        top: 15%;
+        left: 55%;
+        margin-top: -50px;  /* Negative half of height. */
+        margin-left: -150px;
+        width: 260px;
+        height: 100px;
+    }
+    .alert-text2{
+        top: 15%;
+        left: 55%;
+        margin-top: -50px;  /* Negative half of height. */
+        margin-left: -150px;
+        width: 260px;
+        height: 100px;
+    }
+}

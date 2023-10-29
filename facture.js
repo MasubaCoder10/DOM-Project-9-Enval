@@ -70,10 +70,10 @@ function addData(array) {
     array.forEach((el) => {
       tbody.innerHTML += `
         <tr class="tr" id="rows">
-            <td class="table " style="text-align: center; padding-left: 40px;">${el.id}</td>
-            <td class="table ">${el.name}</td>
-            <td class="table ">${el.date}</td>
-            <td class="voir "> <button class="button">voir</button> </td>
+            <td class="table td soso" style="text-align: center; padding-left: 40px; ">${el.id}</td>
+            <td class="table td"   >${el.name}</td>
+            <td class="table td" >${el.date}</td>
+            <td class="voir td"  > <button class="button">voir</button> </td>
         </tr>
         `;
     });

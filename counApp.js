@@ -127,7 +127,7 @@ function showPicture(){
         
     
 }
-showPicture()
+
 
 
     file.addEventListener("change", ()=> {  
