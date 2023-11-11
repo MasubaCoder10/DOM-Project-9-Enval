@@ -85,7 +85,7 @@ function addSuivi(arraySuivi) {
   tbodySuivi.innerHTML = "";
   arraySuivi.forEach((suivi, index) => {
     tbodySuivi.innerHTML += `
-        <tr id="rows">
+        <tr id="rows" class="tr">
             <td id="nameLot" class="table td soso" style=" text-align: start; padding-left: 40px;">${suivi.lot}</td>
             <td class="table td">${suivi.etat}</td>
             <td class="table td">${suivi.date}</td>

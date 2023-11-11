@@ -9,59 +9,60 @@ const inputText = document.querySelector("#input-text"),
   headers = document.querySelectorAll("#header"),
   navarImg = document.querySelector("#navar-img");
 
-
 let index = 0;
-let second = 5 * 60;
 
-function time(second) {
-  let sec = 0;
-  let min = 0;
-  let hrs = 0;
-  hrs = Math.floor(second / 3600);
-  min = Math.floor((second / 60) % 60);
-  sec = Math.floor(second % 60);
-  timer.innerHTML = `${hrs < 10 ? "0" : ""}${hrs}:${
-    min < 10 ? "0" : ""
-  }${min}: ${sec < 10 ? "0" : ""}${sec}`;
+if (!localStorage.getItem("timerDown")) {
+  localStorage.setItem("timerDown", 300);
+}
+let second = localStorage.getItem("timerDown");
+var min = parseInt(second / 60);
+var sec = parseInt(second % 60);
+
+function countDownTimer() {
+  if (sec < 10) {
+    sec = "0" + sec;
+  }
+  if (min < 10) {
+    min = "0" + min;
+  }
+  timer.innerHTML = min + ":" + sec;
+
+  if (second <= 0) {
+    localStorage.clear("timerDown");
+    location.reload()
+  } else {
+    second = second - 1;
+
+    min = parseInt(second / 60);
+    sec = parseInt(second % 60);
+    localStorage.setItem("timerDown", second);
+    setTimeout("countDownTimer()", 1000);
+  }
 }
 
-function timerDown() {
-  let x = setInterval(() => {
-    time(second);
-    second--;
-    if (second <= 0) {
-      clearInterval(x);
-    }
-  }, 1000);
-}
-timerDown()
-
-
-let localStorageArray = JSON.parse(localStorage.getItem("arrayLogin"))
-let userConnect = JSON.parse(localStorage.getItem("userConnect"))
-
+let localStorageArray = JSON.parse(localStorage.getItem("arrayLogin"));
+let userConnect = JSON.parse(localStorage.getItem("userConnect"));
 
 function login() {
   index++;
- 
+
   localStorageArray.forEach((item) => {
     if (
       item.userName === inputText.value &&
       item.passWord === inputPassword.value.toString()
     ) {
-
       let objLogin = {
         id: item.id,
         userName: item.userName,
-        passWord: item.passWord
-      }
+        passWord: item.passWord,
+      };
       localStorage.setItem("userConnect", JSON.stringify(objLogin));
 
       window.location.href = "dashboard.html";
-      
+
       /* window.location = */
       index = 0;
-    }else {
+    } else {
       table1.classList.add("alert-text-show");
       setTimeout(() => {
         table1.classList.remove("alert-text-show");
@@ -74,21 +75,34 @@ function login() {
         index = 0;
       } else {
         count();
-
-        setTimeout(() => {
-          table3.classList.add("alert-text-show2");
-          setTimeout(() => {
-            table3.classList.remove("alert-text-show2");
-          }, 5 * 60 * 1000);
-        }, 3000);
+        let checked = true;
+        localStorage.setItem("cheked", JSON.stringify(checked));
+        timers();
       }
 
       index = 0;
       return;
-    } 
-  
+    }
   });
 }
+
+function timers() {
+  let getChecked = JSON.parse(localStorage.getItem("cheked"));
+  if (getChecked) {
+    setTimeout(() => {
+      table3.classList.add("alert-text-show2");
+      countDownTimer();
+      setTimeout(() => {
+        table3.classList.remove("alert-text-show2");
+      }, 5 * 60 * 1000);
+    }, 1000);
+    inputText.disabled = true;
+    inputPassword.disabled = true;
+    btnLogin.disabled = true;
+  }
+  
+}
+timers();
 
 function count() {
   table2.classList.add("alert-text-show1");
@@ -101,14 +115,3 @@ function count() {
   inputPassword.disabled = true;
   btnLogin.disabled = true;
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -81,12 +81,12 @@ function addCommand(arrayCommande) {
   tbodyCommande.innerHTML = "";
   arrayCommande.forEach((command) => {
     tbodyCommande.innerHTML += `
-                          <tr id="rows">
+                          <tr id="rows" class="tr">
                             <td class="table td soso" style="text-align: start; padding-left: 40px;">${command.id}</td>
-                            <td class="table td">${command.name}</td>
-                            <td class="table td">${command.date}</td>
-                            <td class="table td" style="color: red; border-color: black;" >${command.status}</td>
-                            <td class="voir td"> <button class="button">voir</button> </td>
+                            <td class="table td ">${command.name}</td>
+                            <td class="table td ">${command.date}</td>
+                            <td class="table td " style="color: red; border-color: black;" >${command.status}</td>
+                            <td class="voir td "> <button class="button">voir</button> </td>
                                                     
                           </tr>
           `;
@@ -120,6 +120,7 @@ console.log(arrayCommande);
     }
   });
   addCommand(newArrayCommande);
+  document.getElementById("text").innerHTML ="";
   if ((newArrayCommande == "")) {
     document.getElementById("text").innerHTML = `
     <span style="text-align: center;">Aucun Element ne corespond pas à ce nom</span>

@@ -158,6 +158,7 @@ function addData(array) {
       }
     });
     addData(newArray);
+    document.getElementById("text").innerHTML = ""
     if (newArray == "") {
       document.getElementById("text").innerHTML = `
       <span style="text-align: center;">Aucun Element ne corespond pas à ce nom</span>

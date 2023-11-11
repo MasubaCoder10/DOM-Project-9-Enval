@@ -32,6 +32,10 @@ nav img {
   width: 250px;
   text-align: center;
   margin: 50px auto;
+ 
+}
+#navar-img{
+  border-radius: 50%;
 }
 nav span {
 

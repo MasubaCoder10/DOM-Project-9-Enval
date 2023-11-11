@@ -39,6 +39,9 @@ nav img {
     text-align: center;
     margin: 50px auto;
 }
+#navar-img{
+  border-radius: 50%;
+}
 nav span {
 
     font-size: 16px;
@@ -113,7 +116,6 @@ nav .logout {
     margin-right: 1%;
     margin-top: 1%;
     padding: 2% 15px;
-    border: 2px solid red;
 }
 
 .bill-count{
@@ -517,7 +519,7 @@ nav {
   border-radius: 0.3rem;
   color: red;
 }
-.input-box{
+.input-boxs{
   display: flex;
   justify-content: space-between;
 }
@@ -704,6 +706,14 @@ tr,td.buttonUpdate:hover{
   border: #1898A8;
   color: #1898A8;
 }
+td{
+  cursor: pointer;
+}
+tr,td:hover{
+  background-color: #fff;
+  border: #1898A8;
+  color: #1898A8;
+}
 /*################# les media sur dash ######################*/
 
 @media screen and (max-width: 375px) {
@@ -728,9 +738,77 @@ tr,td.buttonUpdate:hover{
 .inputUpdate{
   border-radius: 1rem;
 }
-
+.avatar{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  margin: 0rem 0rem;
 }
+.inputs{
+  height: 31rem;
+  width: 100%;
+  margin-left: 0rem;
+}
+.input-boxs{
+  display: flex;
+  flex-direction: column;
+}
+.avatar-text{
+  text-align: center;
+}
+.img{
+  width: 300px;
+}
+#linKCount{
+  font-size: 13px;
+}
+a#linKCount{
+  font-size: 16px;
+  
+}
+.head{
+  margin-bottom: 2rem;
+}
+}
+@media screen and (max-width: 375px){
 
+.avatar{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  margin: 0rem 0rem;
+}
+.inputs{
+  height: 30rem;
+  width: 100%;
+  margin-left: 0rem;
+}
+.input-boxs{
+  display: flex;
+  flex-direction: column;
+}
+.avatar-text{
+  text-align: center;
+}
+.img{
+  width: 300px;
+  border-radius: 50%;
+}
+#linKCount{
+  font-size: 13px;
+}
+a#linKCount{
+  font-size: 16px;
+  
+}
+.head{
+  margin-bottom: 2rem;
+}
+}
+#photo{
+  width: 300px;
+  border-radius: 50%;
+}
 
 @media screen and (max-width: 768px) {
   .barnav img{
@@ -883,6 +961,75 @@ p {
 }
 label{
   font-size: 18px;
+}
+.avatar{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  margin: 0rem 0rem;
+}
+.inputs{
+  height: 31rem;
+  width: 100%;
+  margin-left: 0rem;
+}
+.input-boxs{
+  display: flex;
+  flex-direction: column;
+}
+.avatar-text{
+  text-align: center;
+}
+.img{
+  width: 200px;
+  display: flex;
+  margin: auto;
+}
+#linKCount{
+  font-size: 13px;
+}
+a#linKCount{
+  font-size: 16px;
+  
+}
+.head{
+  margin-bottom: 2rem;
+}
+}
+@media screen and (max-width: 375px){
+
+.avatar{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0rem;
+  margin: 0rem 0rem;
+}
+.inputs{
+  height: 30rem;
+  width: 100%;
+  margin-left: 0rem;
+}
+.input-boxs{
+  display: flex;
+  flex-direction: column;
+}
+.avatar-text{
+  text-align: center;
+}
+img.img{
+  width: 200px;
+  display: flex;
+  margin: auto;
+}
+#linKCount{
+  font-size: 13px;
+}
+a#linKCount{
+  font-size: 16px;
+  
+}
+.head{
+  margin-bottom: 2rem;
 }
 }
 
